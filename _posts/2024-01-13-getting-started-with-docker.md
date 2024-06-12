@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started - Build and deploy a ridiculously simple python application with Docker
+title: Getting Started - Build and deploy a ridiculously simple python web application with Docker
 categories: [Tutorial, Devops, Cloud, SRE, 101]
 ---
 
