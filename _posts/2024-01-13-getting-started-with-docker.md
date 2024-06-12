@@ -111,7 +111,7 @@ Now lets run the next command to actually run the docker container. This will ru
 
 ```
 Now open the following links localhost:8000 or  http://127.0.0.1:8000 on your web browser and you will be greeted by your web application. 
-![](/blog/images/hello-and-welcome-blog001.png)
+![](/images/hello-and-welcome-blog001.png)
 
 
 Here are a couple of commands to manage your application. 
