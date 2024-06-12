@@ -124,7 +124,7 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 ## Lets publish our image to to a docker registry
 
 Now let us publish this image to the docker registry, so that we can easily distibute  our software and deploy it in kubernetes later! 
-```
+```bash
 >docker login #create a free docker account on hub.docker.com 
 >docker image ls  #find out your docker image name 
 REPOSITORY                      TAG       IMAGE ID       CREATED             SIZE
@@ -141,7 +141,7 @@ This completes the publication to a registry. Effectively, "eternallycurious/pyt
 
 Now this command can be run in any machine in the world, and the application will be deployed and run there! Run this to stop the container: "docker stop CONTAINERID"
 
-```
+```bash
 >docker run -dp 0.0.0.0:8000:8000 eternallycurious/python-docker-homepage-server
 ```
 
