@@ -2,6 +2,7 @@
 layout: post
 title: Getting Started - Build and deploy a ridiculously simple python web application with Docker
 categories: [Tutorial,Devops, Cloud, SRE]
+author: tgangte
 ---
 
 Let's build a simple and straightforward website that's written in Python. It's a real site, quite basic, and greets visitors with a 'Hello’ greeting with some small talk of the weather. Docker is perfect for running and containerizing this application, so that we can deploy it anywhere later. 
