@@ -6,7 +6,12 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <div>
-    <p class="author_title">{{page.author}}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
+  {% if page.author %}
+  <p class="author_title">{{ page.author }}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
+  {% else %}
+  <p class="author_title">{{ site.author }}  ·  {{ page.date | date: "%B %e, %Y" }}</p>
+  {% endif %}
+
     {% if page.last_modified_at %}
     <p class="author_title" datetime="{{ page.last_modified_at | date_to_xmlschema }}">(Updated: {{ page.last_modified_at | date: "%b %-d, %Y" }})</p>
     {% endif %}
@@ -35,5 +40,4 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>-->
 
-  {% include disqus.html %}
 </article>
