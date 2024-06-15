@@ -21,10 +21,10 @@ avatar: /images/practical-sre.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: test@example.com
+  email: /about
   facebook:
   flickr:
-  github: github.com
+  github: github.com/tgangte
   instagram:
   linkedin: 
   pinterest:
