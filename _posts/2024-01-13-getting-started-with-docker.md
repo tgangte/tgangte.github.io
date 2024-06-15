@@ -51,9 +51,9 @@ Now lets run the python webapp the traditional way
 
 
 By dockerize, I mean we will get this application cloud ready! We will package it in a "docker image" which can then be deployed seamlessly in Kubernertes or any other cloud native provider. 
-Download and install docker, follow the official guides for your operating system. https://docs.docker.com/get-docker/
+Download and install docker desktop, follow the official guides for your operating system. https://docs.docker.com/get-docker/
 
-This section is quite simple in that that you only need two commands, "docker init" and  "docker compose up --build" to build your image and run your container. 
+This section is quite simple in that that you only need two commands, "docker init" and  "docker compose up --build" to build your image and run your container. Docker init works only with Docker Desktop as of writing this, so that's what you need. 
 Run "docker init" in the same directory where your webapp.py and requirements.txt reside. Follow the prompts that are asked by the docker init command, most of the default values should be good, so press enter on each step. 
 
 ```bash
