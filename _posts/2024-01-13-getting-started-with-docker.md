@@ -130,20 +130,20 @@ Now let us publish this image to the docker registry, so that we can easily dist
 >docker image ls  #find out your docker image name 
 REPOSITORY                      TAG       IMAGE ID       CREATED             SIZE
 python-docker-homepage-server   latest    300424b1b196   4 minutes ago       124MB 
->docker tag python-docker-homepage-server eternallycurious/python-docker-homepage-server #docker tag imagename YOUR-USER-NAME/image-name
->docker push eternallycurious/python-docker-homepage-server   #this pushes to the repository                            
+>docker tag python-docker-homepage-server /python-docker-homepage-server #docker tag imagename YOUR-USER-NAME/image-name
+>docker push practicalsre/python-docker-homepage-server   #this pushes to the repository                            
 Using default tag: latest
-The push refers to repository [docker.io/eternallycurious/python-docker-homepage-server]
+The push refers to repository [docker.io/practicalsre/python-docker-homepage-server]
 9ad9eb2501f9: Pushed 
 86c485a03b6d: Mounted from library/python 
 latest: digest: sha256:b90048b139527619d53559c8a75b9g1323481fb54886d8142b8a3956754eb408 size: 2202
 ```
-This completes the publication to a registry. Effectively, "eternallycurious/python-docker-homepage-server" becomes a unique string that can be used to download the application. It is also searchable on the docker hub website. https://hub.docker.com/r/eternallycurious/python-docker-homepage-server 
+This completes the publication to a registry. Effectively, "practicalsre/python-docker-homepage-server" becomes a unique string that can be used to download the application. It is also searchable on the docker hub website. https://hub.docker.com/r/practicalsre/python-docker-homepage-server 
 
 Now this command can be run in any machine in the world, and the application will be deployed and run there! Run this to stop the container: "docker stop CONTAINERID"
 
 ```bash
->docker run -dp 0.0.0.0:8000:8000 eternallycurious/python-docker-homepage-server
+>docker run -dp 0.0.0.0:8000:8000 practicalsre/python-docker-homepage-server
 ```
 
 
