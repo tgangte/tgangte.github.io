@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How to setup a multi-node Kubernetes cluster in a homelab using microk8s
+title:  Local Cloud Magic: Creating a Multi-Node Kubernetes Cluster with MicroK8s In a Homelab
 categories: [DevOps, homelab, tutorial]
 excerpt: Let's learn to how to setup a kubernetes homelab in a proxmox local cloud and deploy a sample python application. 
 ---
