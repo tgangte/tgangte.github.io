@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+![](/images/pixel-caricature-small.jpg)
 
 Yet another tech blog, this one focuses broadly on Site Reliability Engineering, DevOps and Cybersecurity among other things.
 
