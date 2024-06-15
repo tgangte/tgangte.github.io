@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Yet another tech blog, this one focuses broadly on Site Reliability Engineering, DevOps and Security.  
+Yet another tech blog, this one focuses broadly on Site Reliability Engineering, DevOps and Cybersecurity among other things.
+
+My musings include scalability, reliability, high availability, proxies and load balancers, cloud technologies, caching, performance, linux internals, networking, firewalls, messaging queues, service discovery, observability, alerting and monitoring, systems design, web technologies, oncall and incident response.     
 
 <div id="mc_embed_shell">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
