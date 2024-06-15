@@ -12,7 +12,7 @@ Here are the objectives of this article:
 * Learn to create a docker image 
 * Learnt to deploy and distrubite a docker image
 
-## Lets build the python web application
+## Let's build the python web application
 Open your favorite text editor (VIM on Macbook is used here) and paste the application code, and save it as webapp.py in a clean directory. I used a directory called python-docker-homepage. This will become your docker image name later.  
 ```python
 from flask import Flask
