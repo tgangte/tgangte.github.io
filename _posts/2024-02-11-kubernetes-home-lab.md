@@ -100,7 +100,7 @@ This completes the kubernetes cluster setup, and you are now ready to deploy app
 
 ## Deploy a sample python application
 
-We will deploy a simple python web application that was previously written and containerized in a docker image in a different article. Refer [gettting started with docker](/getting-started-with-docker/). Just to recap, in that article, we created a simple python flask web application that will listen on port 8000 and respond with a simple message. We then packaged that into a docker image and published it in the docker registry. It can be downloaded using this link [eternallycurious/python-docker-homepage-server](https://hub.docker.com/repository/docker/eternallycurious/python-docker-homepage-server/general)
+We will deploy a simple python web application that was previously written and containerized in a docker image in a different article. Refer [gettting started with docker](/getting-started-with-docker/). Just to recap, in that article, we created a simple python flask web application that will listen on port 8000 and respond with a simple message. We then packaged that into a docker image and published it in the docker registry. It can be downloaded using this link [practicalsre/python-docker-homepage-server](https://hub.docker.com/r/practicalsre/python-docker-homepage-server)
 
 High level tasks: 
 
@@ -128,7 +128,7 @@ spec:
     	app: homepage-server
 	spec:
   	containers:
-  	- image: eternallycurious/python-docker-homepage-server:latest
+  	- image: practicalsre/python-docker-homepage-server:latest
     	name: python-docker-homepage-server
     	command: ["gunicorn"]
     	args: ["webapp:app", "--bind=0.0.0.0:8000"]
