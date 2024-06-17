@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Local Cloud Magic - Creating a Multi-Node Kubernetes Cluster with MicroK8s In a Homelab
-categories: [DevOps, homelab, tutorial]
+title:  Local Cloud Magic - Building a Kubernetes Home Lab Is Easier Than You Think, Thanks To Microk8s!
+categories: [DevOps, Homelab, Tutorial, Kubernetes, Cloud]
 excerpt: Let's learn to how to setup a kubernetes homelab in a proxmox local cloud and deploy a sample python application. 
 ---
 In my home lab, I manage my own "datacenter" using the popular [Proxmox](https://www.proxmox.com) hypervisor. Proxmox enables me to create multiple virtual machines (VMs) directly connected to my home network/switch. Essentially, this setup functions as a cloud computing environment since you can spin up or down as many virtual machines and virtual appliances as you want. However, deploying web applications directly onto these VMs has several drawbacks. It's not easily scalable, deployment and installation can be cumbersome, and resource efficiency is suboptimal. For example, I need to install the correct Python version and dependencies individually on each of my servers where I want to deploy my application.
