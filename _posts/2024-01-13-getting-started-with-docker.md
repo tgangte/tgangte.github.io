@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started - Build and deploy a ridiculously simple python web application with Docker
+title: Build and deploy a ridiculously simple python web application with just two Docker commands
 categories: [Tutorial,Devops, Cloud, SRE]
 ---
 
@@ -9,7 +9,7 @@ Let's build a simple and straightforward website that's written in Python. It's 
 Here are the objectives of this article: 
 * Learn to create a simple python web application
 * Learn to create a docker image 
-* Learnt to deploy and distrubite a docker image
+* Learn to deploy and distrubite a docker image publicly 
 
 ## Let's build the python web application
 Open your favorite text editor (VIM on Macbook is used here) and paste the application code, and save it as webapp.py in a clean directory. I used a directory called python-docker-homepage. This will become your docker image name later.  
@@ -123,7 +123,7 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 ```
 ## Lets publish our image to to a docker registry
 
-Now let us publish this image to the docker registry, so that we can easily distibute  our software and deploy it in kubernetes later! 
+Now let us publish this image to the docker registry, so that we can easily distibute  our software and deploy it in [kubernetes later](/kubernetes-home-lab/)! 
 ```bash
 >docker login #create a free docker account on hub.docker.com 
 >docker image ls  #find out your docker image name 
