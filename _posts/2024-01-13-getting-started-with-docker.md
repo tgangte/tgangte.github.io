@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Build and deploy a ridiculously simple python webapp with just two Docker commands
+title: Build and Deploy a Ridiculously Simple Python Webapp With Just Two Docker Commands
 categories: [Tutorial,Devops, Cloud, SRE]
 ---
 
