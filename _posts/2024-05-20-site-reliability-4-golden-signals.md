@@ -13,7 +13,7 @@ The Four Golden Signals are a set of key metrics introduced by Google's [Site Re
 
   
 
-## Latency
+## 1. Latency
 
 Latency measures the time it takes for a system to respond to a request. It is a critical indicator of the responsiveness and performance of a service. High latency can lead to poor user experience and may indicate bottlenecks or inefficiencies within the system, such as slow database queries, inadequate resource allocation, or poor load balancing.
 
@@ -62,7 +62,7 @@ As we can see, monitoring both percentiles is important, ideally your monitoring
 
 *These depend on internet speed and many other factors, but I added these averages based on my personal experience to get a general idea of latency numbers.
 
-## Traffic
+## 2. Traffic
 
 Traffic refers to the volume of requests or data that a service handles over a given period. It reflects the demand or load placed on the system. Monitoring traffic patterns helps identify usage trends, plan capacity, and detect potential overload situations that could lead to degraded performance or service outages.
 
@@ -72,7 +72,7 @@ Traffic is usually measured in RPS (requests per second) or QPS (queries per sec
 
 For oncall engineers, a QPS drop is one of the most alarming things you can be alerted for. It could mean that your website stopped receiving traffic due to a failure somewhere in the infrastructure. It is therefore an important signal to keep an eye on.
 
-## Errors
+## 3. Errors
 
 Errors represent the rate of failed requests or operations within a system. This includes explicit errors (e.g., HTTP 500 errors), implicit errors (e.g., incorrect responses), and policy-based errors (e.g., requests exceeding a defined threshold). Tracking errors is crucial for understanding the health of a system from the user's perspective and taking prompt action to resolve critical issues.
   ![](/images/errors-blog003.png)
@@ -81,7 +81,7 @@ Load balancers and web servers are configured to respond to errors with 5xx resp
 
  
 
-## Saturation
+## 4. Saturation
 
 Saturation measures the degree to which a system or resource is being utilized or overloaded. It indicates how "full" or saturated the system is at a given time. Monitoring saturation helps identify when a system is approaching its capacity limits, allowing for proactive measures to be taken before performance degrades or failures occur.
 
