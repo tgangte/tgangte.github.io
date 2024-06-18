@@ -90,6 +90,6 @@ Saturation measures the degree to which a system or resource is being utilized o
 CPU or memory metrics of each server needs to be measured and reported in real time. Database size, disk size or network throughput are also examples of saturation that need to be added to alerting and monitoring. Your network links could be nearing its capacity, and understanding the saturation limit can help you scale and plan for the future.
 
   
- ## Conclusion  
+## Conclusion
 
 It goes without saying that each application infrastructure will need its own set of signals to alert on. But these 4 golden signals are a great first indicator and a must have for production facing teams if they want to have a detailed understanding of how their system is behaving, or if they want to troubleshoot production issues without delay. 
