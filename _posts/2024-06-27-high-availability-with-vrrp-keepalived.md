@@ -1,6 +1,6 @@
 ---
 layout: post
-title:   High Availability - How to Prevent a Load Balancer outage with VRRP and KeepAlived
+title:   High Availability - How to Prevent a Load Balancer Outage With VRRP and KeepAlived
 categories: [SRE, High Availability, DevOps, Load Balancers ]
 excerpt: Learn how to configure a single IP to be shared between two servers for active-passive failover 
 ---
@@ -19,7 +19,7 @@ I present to you the concept of a floating _Virtual IP_ or VIP; One VIP is share
 
 ![](/images/lb2.png)
 
-From the client or user's perspective, nothing changes, they will not even notice any outage as the IP address failover happens in real time. Clients continue to connect to the same virtual floating IP address. This is done by a software called Keepalived, and it uses a network protocol called VRRP. [Virtual Router Redundancy Protocol](https://en.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol).   The beauty of this setup is that VRRP works at Layer 3 (network layer), meaning it can be used for any service regardless of protocol or port numbers.   
+From the client or user's perspective, nothing changes, they will not even notice any outage as the IP address failover happens in real time. Clients continue to connect to the same virtual floating IP address. This is done by a software called [Keepalived](https://www.keepalived.org/), and it uses a network protocol called VRRP. [Virtual Router Redundancy Protocol](https://en.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol).   The beauty of this setup is that VRRP works at Layer 3 (network layer), meaning it can be used for any service regardless of protocol or port numbers.   
 
 
 Let's demonstrate this in practice by setting up the design in the diagram using an Ubuntu virtual machine lab. 
