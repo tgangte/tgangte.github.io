@@ -32,10 +32,11 @@ In this lab, I used [multipass](https://multipass.run/), a handy tool from Canon
 brew install multipass #install multipass on a macbook 
 multipass launch lts --name  loadbalancer1 #this creates an ubuntu lts virtual machine
 multipass launch lts --name  loadbalancer2
-multipass launch lts --name  webapp1
-multipass launch lts --name  webapp2
+multipass launch lts --name  webserver1
+multipass launch lts --name  webserver2
 multpass shell loadbalancer1 #login to the host
 ```
+This table shows the configurations on my lab environment. 
 
 
 | Hostname      | IP           | Components                            |
