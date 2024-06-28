@@ -162,14 +162,14 @@ Let's look at the keepalived logs:
 
 As we can see, lb1 and lb2 communicate between themselves and elect the leader, that is the host that has higher priority.
 
-Now lets shut down loadbalancer1
+Now let's shut down loadbalancer1, You can shut keepalived or even the linux vm itself. "sudo systemctl stop keepalived" or "sudo shutdown now"
  
 ![](/images/load-balance-browser.gif)
 
 
-Refreshing the client’s browser continuously, we can see that the VIP continues to return 200. No outage experienced. 
+Refreshing the client’s browser continuously, we can see that the VIP continues to return 200. No outage experienced! 
 
-Ping from a client terminal shows that there was a single instance of packet drop when the VIP switched from primary to backup.
+Additionally. ping from a client terminal shows that there was a single instance of packet drop when the VIP switched from primary to backup.
 
 ```bash
 64 bytes from 192.168.64.100: icmp_seq=108 ttl=64 time=1.769 ms
