@@ -2,7 +2,7 @@
 layout: post
 title:   High Availability - How to Prevent a Load Balancer Outage With VRRP and KeepAlived
 categories: [SRE, High Availability, DevOps, Load Balancers ]
-excerpt: Learn how to configure a single IP to be shared between two servers for active-passive failover 
+excerpt: Learn how to configure a single IP to be shared between two load balancers for active-passive failover.  ![](/images/lb1.png)
 ---
 In a very basic web architecture, a load balancer is used to distribute traffic evenly between two or more downstream application/web servers to provide redundancy in case one webserver goes down.  Here is a diagram that illustrates this. It shows a layer 7 load balancer (HAproxy) that accepts traffic on port 80, and forwards it to the backend webserver1 and webserver2 in round robin fashion. If webserver1 goes down, haproxy can seamlessly forward all packets to webserver2 instead.  
 
