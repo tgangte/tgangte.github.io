@@ -6,7 +6,7 @@ excerpt: Learn how to configure a single IP to be shared between two servers for
 ---
 In a very basic web architecture, a load balancer is used to distribute traffic evenly between two or more downstream application/web servers to provide redundancy in case one webserver goes down.  Here is a diagram that illustrates this. It shows a layer 7 load balancer (HAproxy) that accepts traffic on port 80, and forwards it to the backend webserver1 and webserver2 in round robin fashion. If webserver1 goes down, haproxy can seamlessly forward all packets to webserver2 instead.  
 
-![](/image/lb1.png)
+![](/images/lb1.png)
 
 But what happens when the load balancer itself goes down? This is a crucial but all too common problem when designing or building a high availability system.
 
@@ -17,7 +17,7 @@ This sounds logically simple, but the technical challenge here is what or who wi
 
 I present to you the concept of a floating _Virtual IP_ or VIP; One VIP is shared among two load balancers dynamically, on the fly. The VIP will be assigned to one primary node, and when that node goes down, the Virtual IP should switch over to the backup node automatically! This is effectively a Layer 3  high availability failover solution and should not be misconstrued as load balancing. The load balancing part is done by the haproxy instances.
 
-![](/image/lb2.png)
+![](/images/lb2.png)
 
 From the client or user's perspective, nothing changes, they will not even notice any outage as the IP address failover happens in real time. Clients continue to connect to the same virtual floating IP address. This is done by a software called Keepalived, and it uses a network protocol called VRRP. [Virtual Router Redundancy Protocol](https://en.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol).   The beauty of this setup is that VRRP works at Layer 3 (network layer), meaning it can be used for any service regardless of protocol or port numbers.   
 
@@ -158,13 +158,13 @@ Since 101 has higher priority, it is designated as the primary, and will handle 
 
 Let's look at the keepalived logs:
 
-![](/image/vrrplogs.png)
+![](/images/vrrplogs.png)
 
 As we can see, lb1 and lb2 communicate between themselves and elect the leader, that is the host that has higher priority.
 
 Now lets shut down loadbalancer1
  
-![](/image/load-balance-browser.gif)
+![](/images/load-balance-browser.gif)
 
 
 Refreshing the client’s browser continuously, we can see that the VIP continues to return 200. No outage experienced. 
