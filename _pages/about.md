@@ -13,9 +13,16 @@ My musings include scalability, reliability, high availability, proxies and load
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style type="text/css">
         #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 400px;}
+        .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
         /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
+
+<div class="form-container">
 <div id="mc_embed_signup">
     <form action="https://practicalsre.us13.list-manage.com/subscribe/post?u=8bfea0c90df9c4e6a53370a41&amp;id=abfa96cbcb&amp;f_id=002847e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
         <div id="mc_embed_signup_scroll"><h2>Subscribe to the SRE newsletter!</h2>
@@ -37,6 +44,7 @@ My musings include scalability, reliability, high availability, proxies and load
         </div>
     </div>
 </form>
+</div>
 </div>
 </div>
 
