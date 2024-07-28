@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SRE Tools
+title: SRE Tools - Hostname and fqdn formatter
 categories: [Tools]
 permalink: /hostname/
 ---

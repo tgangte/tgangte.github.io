@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SRE Tools - xml to table
+title: SRE Tools - xml to table converter
 categories: [Tools]
 permalink: /xml-to-table/
 ---
