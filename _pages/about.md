@@ -9,6 +9,7 @@ Yet another tech blog, this one focuses broadly on Site Reliability Engineering,
 
 My musings include scalability, reliability, high availability, proxies and load balancers, cloud technologies, caching, performance, linux internals, networking, firewalls, messaging queues, service discovery, observability, alerting and monitoring, systems design, web technologies, oncall and incident response.     
 
+[Send me a note via the contact page!](https://us13.list-manage.com/contact-form?u=8bfea0c90df9c4e6a53370a41&form_id=1707ab779d024bba64b5afaa392d6d19)
 <div id="mc_embed_shell">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style type="text/css">
