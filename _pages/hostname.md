@@ -7,11 +7,12 @@ permalink: /hostname/
 
 <div id="page-content">
             <h1>SRE Swiss army knife - Hostname Extractor and Formatter</h1>
-            <h3>This is a simple Hostname Extractor and Formatter that will format valid FQDNs into command line readable formats in bulk operation</h3>
+            <h4>This is a simple Hostname Extractor and Formatter that will format valid FQDNs into command line readable formats in bulk operation</h4>
     Text filter regex pattern: <input id="inputPattern" size=50 value="\b[a-z0-9-]+(?:\.[a-z0-9-]+)+\.[a-z]{2,}\b">
 
     <br><br>
     <textarea id="inputText" rows="18" cols="85" placeholder="Paste your servername/fqdn here alongside a bunch of random text and click the format buttons below, you will find that the app names are filtered and formatted to be command line friendly.">Paste your servername/fqdn here alongside a bunch of random text and click the format buttons below, you will find that the app names are filtered and formatted to be command line/terminal friendly. 
+
 The default REGEX is designed to filter the sample hostnames below but you can change it to whatever suits you. 
 
 See example here: https://regex101.com/r/TITW2V/1
