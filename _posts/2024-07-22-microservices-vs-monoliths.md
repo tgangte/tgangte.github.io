@@ -104,7 +104,7 @@ Cons:
 * Introduces the need for more advanced infrastructure such as containers, service discovery, messaging queues, load balancers and distributed tracing and logging.
 
 
-## Conclusion - Which is better?  Which one should we use?  
+## Conclusion - Which is better?
 
 
 There is no one size fits all solution, but small companies with stable traffic and data volumes should generally avoid the complexities of microservices architecture. Simpler approaches often work best for smaller operations.
