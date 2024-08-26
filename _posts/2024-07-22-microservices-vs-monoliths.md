@@ -113,8 +113,8 @@ Large companies or companies that anticipate rapid growth and scaling typically 
 
 Further reading: 
 
-[Rebuilding Netflix Video Processing Pipeline with Microservices | by Netflix Technology Blog](https://netflixtechblog.com/rebuilding-netflix-video-processing-pipeline-with-microservices-4e5e6310e359)
+[Rebuilding Netflix Video Processing Pipeline with Microservices by Netflix Technology Blog](https://netflixtechblog.com/rebuilding-netflix-video-processing-pipeline-with-microservices-4e5e6310e359)
 
 [Microservices.io](https://microservices.io/)
 
-[What Is Microservices Architecture? | Google Cloud](https://cloud.google.com/learn/what-is-microservices-architecture)
+[What Is Microservices Architecture? Google Cloud](https://cloud.google.com/learn/what-is-microservices-architecture)
