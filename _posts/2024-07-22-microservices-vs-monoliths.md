@@ -13,9 +13,9 @@ Let’s try and understand each architecture better by building an example appli
 **Objective: Build a simple web application that greets the visitor and displays the current weather of the visitor’s location.**
 
 
-## Monolith Architecture Weather App
+## Monolithic Architecture Weather App
 
-If we were to build this as a monolith, we might create a python flask application that accepts the HTTP Request, and get the visitor’s IP address from the browser. 
+If we were to build this in monolithic architecture, we might create a python flask application that accepts the HTTP Request, and get the visitor’s IP address from the browser. 
 
 Then a function within the application converts the visitor’s IP address to a city name or co-ordinates.  
 
@@ -27,7 +27,7 @@ All this happens under one running application, which is called the monolith. Th
 ![alt_text](images/weather-monolith.png "image_tooltip")
 
 
-Fig 1: Monolith weather application 
+Fig 1: Monolithic weather application 
 
 Now let's identify some pros and cons with this monolith architecture.
 
