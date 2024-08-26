@@ -6,9 +6,7 @@ excerpt: Design a weather web application to understand monolith design vs micro
 ---
 Microservices are a collection of services that work together to serve an application’s purpose. Contrast this with a monolith service that includes all functions and features in one application. 
 
-Most simple applications will start out as a monolith. For example, a  simple helloworld.py file  that prints ”hello world” is a monolith.  
-
-Big tech companies operate at massive scale, in terms of data volume, user traffic or number of engineers building the applications. This is why microservices are the preferred architecture pattern in most large scale production systems. 
+Most simple applications will start out as a monolith. For example, a  simple helloworld.py file  that prints ”hello world” is a monolith. Big tech companies operate at massive scale, in terms of data volume, user traffic or number of engineers building the applications. This is why microservices are the preferred architecture pattern in most large scale production systems. 
 
 Let’s try and understand each architecture better by building an example application. 
 
