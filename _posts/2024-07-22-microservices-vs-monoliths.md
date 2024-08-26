@@ -1,6 +1,6 @@
 ---
 layout: post
-title:   Systems Design - Understanding monolith and microservice patterns
+title:   Systems Design - Understanding Monolith and Microservice Patterns
 categories: [SRE, High Availability, Microservices, System Design ]
 excerpt: Design a weather web application to understand monolith design vs microservice design pattern 
 ---
