@@ -24,7 +24,7 @@ Next the application makes a separate call to one of the many weather data provi
 All this happens under one running application, which is called the monolith. This application is then deployed in a single server in our hosting provider or datacenter. 
 
 
-![alt_text](images/weather-monolith.png "image_tooltip")
+![alt_text](/images/weather-monolith.png "image_tooltip")
 
 
 Fig 1: Monolithic weather application 
@@ -67,7 +67,7 @@ Here’s a simple implementation of this basic client-server microservice using 
 
 
 
-![alt_text](images/weather-microservice.png "image_tooltip")
+![alt_text](/images/weather-microservice.png "image_tooltip")
 
 
 Fig 2: Microservices weather application 
