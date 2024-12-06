@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Local CA Documentation</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href=".">Local CA Documentation</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#local-ca-your-own-internal-certificate-authority" class="nav-link">Local CA - Your Own Internal Certificate Authority!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#motivation" class="nav-link">Motivation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#features" class="nav-link">Features</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#quick-start-deploy-with-pre-built-docker-image" class="nav-link">Quick Start: Deploy with Pre-Built Docker Image</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#managing-services" class="nav-link">Managing Services</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#local-development-steps" class="nav-link">Local Development steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#root-certificate-installation" class="nav-link">Root Certificate Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#clientleaf-certificate-installation" class="nav-link">Client/Leaf Certificate Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#user-administration" class="nav-link">User Administration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#backups" class="nav-link">Backups</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#code-repository" class="nav-link">Code Repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="local-ca-your-own-internal-certificate-authority">Local CA - Your Own Internal Certificate Authority!</h2>
+<p></br></p>
+<p>Welcome to <strong>Local CA</strong>, an open-source, self-hosted Certificate Authority (CA) that allows you to manage your own Public Key Infrastructure (PKI) for internal or home network use.</p>
+<p>With Local CA, you can secure your locally hosted web services and eliminate HTTPS insecure warnings without relying on external services like Let's Encrypt.</p>
+<h2 id="motivation">Motivation</h2>
+<p>HTTPS is the bare minimum security needed for websites on the internet. It prevents eavesdroppers from intercepting your data over the network since it is encrypted by TLS.</p>
+<p>What about the home network? Many people run their own websites and self hosted services in their home network, and there is no good way to secure these internal sites.
+For example, Bitwarden is a self-hosted password manager and using it without TLS would be very ill advised, even if it is just on the home network. Home networks can be penetrated by insecure or vulnerable IOT devices for example. </p>
+<p>A common workaround is to use a reverse proxy or port forwarding to expose the internal website's port 80 to the internet and have Let's Encrypt issue certificates. This is a deal breaker for many people because exposing port 80 to the web, even if just briefly, is a security vulnerability. And to make matters worse, you have to do this every 90 days, since Let's Encrypt only issues certs for that long. </p>
+<p>Therefore I've found that best way to secure your local services is to create your own Certificate Authority by generating self-signed certificates and installing them in your devices. This can be done using a complicated set of openssl commands which I can never remember. Enterprises do this too, but they often use commercial software or in house tools and it gets complicated. </p>
+<p>Local CA was created to solve all these issues. It gives you full and granular control over how you manage your own internal cyber security. </p>
+<p></br></p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Secure HTTPS for Your Home Network</strong>: Easily enable HTTPS for local services like Proxmox, AdGuard Home, Pi-Hole, Jellyfin, Grafana, Homepage, Home Assistant, Bitwarden, basically any service that supports SSL/TLS.</li>
+<li><strong>Customizable PKI</strong>: Create root certificates (self-signed), intermediate certificates, and leaf/end-user certificates.</li>
+<li><strong>Web-Based UI</strong>: Manage certificates through an intuitive Python Django + Bootstrap-based web interface.</li>
+<li><strong>Lightweight Deployment</strong>: Deploy Local CA quickly using Docker in a Virtual Machine or a Raspberry PI.</li>
+<li><strong>Personal Branding</strong>: Name your root certificates whatever you want! </li>
+<li><strong>Mutual TLS (mTLS) Support</strong>: Use the generated certificates in mTLS applications.</li>
+</ul>
+<p></br></p>
+<h2 id="quick-start-deploy-with-pre-built-docker-image">Quick Start: Deploy with Pre-Built Docker Image</h2>
+<h4 id="prerequisites">Prerequisites</h4>
+<ul>
+<li>Ensure Docker and Docker compose are installed on your system. <a href="">https://docs.docker.com/engine/install/</a></li>
+</ul>
+<h3 id="deployment-steps">Deployment Steps</h3>
+<ol>
+<li>
+<p>Download the Docker Compose file:</p>
+<p><code>wget https://raw.githubusercontent.com/tgangte/LocalCA/refs/heads/main/docker-compose-from-registry.yml</code></p>
+</li>
+<li>
+<p>Start the services</p>
+<p><code>docker compose -f docker-compose-from-registry.yml up</code></p>
+</li>
+<li>
+<p>Access the application in your browser:</p>
+<ul>
+<li>Navigate to the host's IP address or <code>127.0.0.1</code>.</li>
+<li>
+<p>Default credentials:</p>
+<ul>
+<li>Username: <code>admin</code></li>
+<li>Password: <code>password</code> (Change this immediately after deployment.)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="for-arm-architecture-eg-raspberry-pi-apple-silicon">For ARM Architecture (e.g., Raspberry Pi, Apple Silicon)</h3>
+<ol>
+<li>
+<p>Download the ARM-specific Docker Compose file:</p>
+<p><code>wget https://raw.githubusercontent.com/tgangte/LocalCA/refs/heads/main/docker-compose-from-registry-arm.yml</code></p>
+</li>
+<li>
+<p>Start the services:</p>
+<p><code>docker compose -f docker-compose-from-registry-arm.yml up</code></p>
+</li>
+</ol>
+<h2 id="managing-services">Managing Services</h2>
+<ul>
+<li>
+<p>Run in detached mode (background):</p>
+<p><code>docker compose -f docker-compose-from-registry.yml up -d</code></p>
+</li>
+<li>
+<p>Stop services:</p>
+<p><code>docker compose -f docker-compose-from-registry.yml down</code></p>
+</li>
+</ul>
+<h2 id="local-development-steps">Local Development steps</h2>
+<p>If you want to build and deploy the app from the code repository, follow the following steps. </p>
+<ol>
+<li>
+<p>Clone the repository</p>
+<p><code>git clone https://github.com/tgangte/LocalCA.git</code></p>
+</li>
+<li>
+<p>Set up a virtual environment</p>
+<p><code>python3 -m venv venv source venv/bin/activate</code></p>
+</li>
+<li>
+<p>Install dependencies</p>
+<p><code>pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p>Apply migrations and initialize admin user</p>
+<p><code>cd localca_project</code>python manage.py makemigrations LocalCA 
+<code>python manage.py migrate</code>python manage.py initadmin`</p>
+</li>
+<li>
+<p>Run the development server:</p>
+<p>bash</p>
+<p><code>python manage.py runserver</code></p>
+</li>
+</ol>
+<h2 id="root-certificate-installation">Root Certificate Installation</h2>
+<p>Once the CA is created, the root public certificate needs to be installed in all client devices for the first time, as a one time only exercise. And since it is a self signed digital certificate, the client devices need to be explicitly told to trust it.   The process varies by device. </p>
+<ol>
+<li>Download the root public key from the locaca homepage. It is just text file but saved in .pem format. </li>
+<li>Install it in the client device, steps vary by operating system. </li>
+</ol>
+<h4 id="windows">Windows</h4>
+<p>To trust a self-signed certificate on Windows, run <code>certmgr.msc</code> and import your certificate into the Trusted Root Certification Authorities.</p>
+<h4 id="linux">Linux</h4>
+<p>To trust a self-signed certificate on Linux, add your certificate to the following directories:</p>
+<p><code>/usr/local/share/ca-certificates/
+/usr/share/ca-certificates/</code></p>
+<p>And run the following commands:</p>
+<p><code>sudo dpkg-reconfigure ca-certificates
+sudo update-ca-certificates</code></p>
+<h4 id="android">Android</h4>
+<p>Follow the steps from the android docs
+<a href="">https://support.google.com/pixelphone/answer/2844832?hl=en</a></p>
+<h4 id="mac-and-ios">Mac and iOS</h4>
+<p>Follow the steps from Apple 
+<a href="">https://support.apple.com/guide/keychain-access/add-certificates-to-a-keychain-kyca2431/mac</a>
+<a href="">https://support.apple.com/en-us/102390</a></p>
+<h2 id="clientleaf-certificate-installation">Client/Leaf Certificate Installation</h2>
+<p>The client/leaf certificates need to be installed on your web services, and the steps vary by operating system and web server. Apache, Nginx, Haproxy etc are some common web servers and the certificate installation steps can be found in their respective websites. </p>
+<p>The client devices need three components to work, the intermediate certificate, the actual leaf certificate, and the leaf certificate private key. 
+When you download a public key chain from the Local CA portal, the intermediate and leaf certificates are already combined into one .pem file, and the private key is on the second file. </p>
+<p>Here is an example of how to install the TLS certificate on Nginx. <a href="">https://nginx.org/en/docs/http/configuring_https_servers.html</a>.</p>
+<pre><code>server {
+    listen              443 **ssl**;
+    server_name         www.example.com;
+    ssl_certificate     www.example.com.crt;
+    ssl_certificate_key www.example.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    ...
+}
+</code></pre>
+<p>In his example nginx.conf, the leaf certificate should be created with  a CN and SAN of www.example.com. The <strong>ssl_certificate</strong> should have the public key chain file downloaded from Local CA (which includes intermediate+leaf) and the <strong>ssl_certificate_key</strong> should be the private key file downloaded from Local CA portal. </p>
+<h3 id="certificate-distribution-and-renewal">Certificate distribution and renewal</h3>
+<p>The default certificate expiry of the leaf certificate is 1 year. That means you need to create a new certificate and reinstall it when expiry date is near.  The old cert can simply be deleted from the admin panel. 
+LocalCA does not currently support the ACME protocol, so this process is not automated yet. </p>
+<p>Recommendation is to use configuration management tools like Ansible to install the certificates if there are a large number of hosts to install to. </p>
+<h2 id="user-administration">User Administration</h2>
+<p>LocalCA use django's admin and auth system, so you can create and manage users, passwords and permissions from the admin panel. You can also delete certificates from the admin panel. 
+The Admin panel can be accessed at /admin, for example:  <code>127.0.0.1/admin</code> and login using the superadmin credentials. </p>
+<p>Users can only create and download private key of certificates they created. All public keys can however be downloaded by anyone without logging in and are listed on the homepage. </p>
+<h2 id="backups">Backups</h2>
+<p>All data, including certificates and login info is stored in a SQLite database file using django's built in ORM, called <code>db.sqlite3</code>. This database file is unencrypted, so access to the folder and server must be tightly restricted. </p>
+<p>The database is stored in  the 'db' directory in the project root, and if deployed via docker, the db is accessible via a  docker volume.<br />
+In most linux distros, you can find the volume in <strong>/var/lib/docker/volumes</strong></p>
+<p>You can manually or with a script copy the database file to an offline backup periodically. </p>
+<h2 id="code-repository">Code Repository</h2>
+<p>Githgub Repo: <a href="">https://github.com/tgangte/LocalCA</a></p>
+<p>Docker Hub: <a href="">https://hub.docker.com/r/practicalsre/local-ca/tags</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2024-12-06 21:18:05.745085+00:00
+-->
