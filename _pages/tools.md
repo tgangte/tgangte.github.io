@@ -1,8 +1,10 @@
 ---
 layout: page
 permalink: /tools/
-title: Handy SRE Tools
+title: Handy Tools and Scripts
 ---
+ [Local CA - Your Own Internal Certificate Authority!](/localca) - Local CA is an open-source, self-hosted Certificate Authority (CA) that allows you to manage your own Public Key Infrastructure (PKI) for internal or home network use.
+
 
  [SRE Swiss army knife - Hostname Extractor and Formatter](/hostname) - I wrote this tool to address my specific needs of parsing hostnames in bulk. I've published it here in case others find it handy!
  
